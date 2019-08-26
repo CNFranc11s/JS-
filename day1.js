@@ -26,7 +26,7 @@ function check(s){
     var start = s.substring(0,1).toUpperCase();
     var end = s.substring(1).toLowerCase();
     return start+end;
-}
+}ssss
 return arr.map(check);
 }
 console.log(normalize(arr));
