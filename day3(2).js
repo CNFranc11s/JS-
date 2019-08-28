@@ -44,23 +44,23 @@
 // };
 
 //class继承 ES6中新增的语法，定义class变简单！
-class Student{
-    constructor(name){
-        this.name = name;
-    }
-    hello(){
-        console.log(`Hello,${this.name}!`);
-    }
+class Student {
+  constructor(name) {
+    this.name = name;
+  }
+  hello() {
+    console.log(`Hello,${this.name}!`);
+  }
 }
-class PrimaryStudent extends Student{
-    constructor(name,grade){
-        super(name);
-        this.grade = grade;
-    }
-    myGrade(){
-        console.log(`I am at grade ${this.grade}`);
-    }
+class PrimaryStudent extends Student {
+  constructor(name, grade) {
+    super(name);
+    this.grade = grade;
+  }
+  myGrade() {
+    console.log(`I am at grade ${this.grade}`);
+  }
 }
-var a = new PrimaryStudent('hxx',1);
+var a = new PrimaryStudent("hxx", 1);
 a.myGrade();
 a.hello();

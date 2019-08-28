@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- <div id="list">
+      <h1>我是标题</h1>
+      <p id="1">1</p>
+      <p id="2">2</p>
+      <p id="3">3</p>
+      <p id="4">4</p>
+      <p id="5">5</p>
+      <p id="to-be-remove">bye</p>
+    </div>
+    <hr />
+    <p id="p-id">....</p> -->
+    <form
+      id="test-register"
+      action="#"
+      target="_blank"
+      onsubmit="return checkRegisterForm()"
+    >
+      <p id="test-error" style="color:red"></p>
+      <p>用户名: <input type="text" id="username" name="username" /></p>
+      <p>口令:<input type="password" id="password" name="password" /></p>
+      <p>重复口令: <input type="password" id="password-2" /></p>
+      <p>
+        <button type="submit">提交</button> <button type="reset">重置</button>
+      </p>
+    </form>
+  </body>
+  <script>
+    // var p = document.getElementById("p-id"); //捕获p标签
+    // p.innerHTML = "Franc11s"; //更改捕获的p标签的内容
+    // p.style.color = "black"; //修改样式
+    // p.style.fontWeight = "bold";
+    // p.style.fontSize = "1100%";
+    // var d1 = document.getElementById("list"); //捕获div标签
+    // d1.appendChild(p); //将捕获的p标签插入div标签中
+    // var pp = document.createElement("p"); //新增一个标签
+    // pp.id = "newp";
+    // pp.innerText = "i am new guy";
+    // d1.appendChild(pp); //将新增的标签插入到div中
+    // d1.insertBefore(pp, p); //将新增的标签插入到捕获的p的前边
+    // var self = document.getElementById("to-be-remove"); //捕获需要删除的节点
+    // var parent = self.parentElement; //捕获需要删除的节点的双亲结点
+    // var removed = parent.removeChild(self); //删除节点
+    // removed === self;
+  </script>
+</html>
