@@ -43,3 +43,24 @@
 // var re = /^(\d{3})-(\d{3,8})$/;
 // console.log(re.exec('010-12345')); // ['010-12345', '010', '12345']
 // console.log(re.exec('010 12345')); // null
+
+
+//面向对象
+// 构造函数
+//创建一个Cat对象，封装一个say方法
+function Cat(args){
+    this.name = args.name||'流浪猫';
+    this.age = args.age||1;
+    Cat.prototype.say = function(){
+        return `Hello, ${this.name}!`
+    }
+}
+//创建一个函数，封装new方法，通过传参的方式构造对象。
+function createCat(args){
+        return new Cat(args||{});
+    }
+//新建凯蒂对象
+var kitty = createCat({
+    name:"凯蒂"
+});
+console.log(kitty.say());
