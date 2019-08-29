@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form enctype="multipart/form-data" method="POST" onsubmit="onSubmit()">
+      <input type="file" id="test-file-upload" />
+      <input type="submit" />
+    </form>
+  </body>
+  <script>
+    var f = document.getElementById("test-file-upload");
+    var filename = f.value;
+    console.log("TCL: f.value", f.value);
+    console.log("TCL: filename", filename);
+    function onSubmit() {
+      if (
+        !filename ||
+        !(
+          filename.endWith(".jpg") ||
+          filename.endWith(".png") ||
+          filename.endWith(".gif")
+        )
+      ) {
+        alert("您只能上传图片文件");
+        window.location.href = this;
+        //   return false;
+      }
+    }
+  </script>
+</html>

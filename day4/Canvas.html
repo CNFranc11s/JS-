@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Canvas</title>
+    <script>
+      window.addEventListener("resize", resizeCanvas, false);
+
+      function resizeCanvas() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+      function draw(id) {
+        var canvas = document.getElementById(id);
+        if (canvas == null) {
+          return false;
+        }
+        var context = canvas.getContext("2d");
+        context.fillStyle = "#eeeeef";
+        context.fillRect(0, 0, 300, 250);
+        for (var i = 0; i <= 10; i++) {
+          context.beginPath();
+          context.arc(i * 12, i * 12, i * 5, 0, Math.PI * 2, true);
+          context.closePath();
+          context.fillStyle = "rgba(255,0,0,0.25)";
+          context.fill();
+        }
+      }
+    </script>
+  </head>
+  <body onload="draw('canvas')">
+    <canvas
+      id="canvas"
+      ,width="1000px"
+      ,height="1000px"
+      style="border: 1px solid #000000"
+    ></canvas>
+  </body>
+</html>
