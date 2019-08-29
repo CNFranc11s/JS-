@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OpertateForm</title>
+  </head>
+  <body>
+    <input type="text" id="email" />
+    <p id="p1">...</p>
+
+    <label
+      ><input type="radio" name="weekday" id="monday" value="1" /> Monday</label
+    >
+    <label>
+      <input type="radio" name="weekday" id="tuesday" value="2" />
+      Tuesday</label
+    >
+    <form id="test-form">
+      用户名：<input type="text" name="user-name" />
+      密码：<input type='password' name='user-password'
+        <input type="submit" onclick="doSubmitForm()">submit</button>
+    </form>
+  </body>
+  <script>
+    var input = document.getElementById("email"); //获取值
+    input.value = "test@example.com"; //设置值
+    var mon = document.getElementById("monday");
+    var tue = document.getElementById("tuesday");
+    mon.value; // '1'
+    tue.value; // '2'
+    mon.checked; // true或者false
+    tue.checked = true; // true或者false
+    var pwd = document.getElementById("user-password");
+  </script>
+</html>

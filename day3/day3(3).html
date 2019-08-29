@@ -51,5 +51,20 @@
     // var parent = self.parentElement; //捕获需要删除的节点的双亲结点
     // var removed = parent.removeChild(self); //删除节点
     // removed === self;
+
+    var checkRegisterForm = function() {
+      var username_reg = /^[0-9a-zA-Z]{3,10}$/;
+      var username = document.getElementById("username").value;
+      if (!username_reg.test(username)) return false;
+      var password_reg = /^.{6,20}$/;
+      var password = document.getElementById("password").value;
+      var password2 = document.getElementById("password-2").value;
+      if (
+        !(password_reg.test(password) && password_reg.test(password2)) &&
+        password === password2
+      )
+        return false;
+      return true;
+    };
   </script>
 </html>
