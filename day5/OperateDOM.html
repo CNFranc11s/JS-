@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  </head>
+  <body>
+    <ul id="test-tl">
+      <h1>Frank is the best.</h1>
+      <li class="sts a" name="sts1">I have no patience for useless things.</li>
+      <li calss="sts b" name="sts2">
+        And a person’s character isn’t determined by how he or she enjoys
+        victory, but rather how he or she endures defeat.
+      </li>
+      <li class="sts a">
+        What are we supposed to do in the face of so much senseless pain? And he
+        said to me,“what else can we do but take what seems meaningless and try
+        to make something meaningful from it.”
+      </li>
+      <li class="sts b">
+        There is but one rule: Hunt or be hunted.
+      </li>
+    </ul>
+  </body>
+  <script>
+    var sts1 = $("#test-tl li[name=sts1]");
+    sts1.html(
+      '<span style="color: white; background-color:black">I have no patience for useless things.</span>'
+    );
+    $("#test-tl li.a")
+      .css("background-color", "grey")
+      .css("color", "black");
+  </script>
+</html>
